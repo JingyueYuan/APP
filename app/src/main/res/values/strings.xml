@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">裂缝检测</string>
+    <string name="content_simple_confirm_dialog" >服务器异常！</string>
+    <string name="dialog_tips">提示</string>
+    <string name="lab_submit">确定</string>
+    <string name="lab_cancel">取消</string>
+    <string name="netUnConneted">当前网络不可用，请检查是否开启了联网！</string>
+    <string name="no_net_error">错误</string>
+    <string name="content_downloading">正在下载中，请稍后…</string>
+    <string name="suggetContact">请输入您的联系方式，点击发送，稍后会与您联系！</string>
+    <string name="aboutSoft">本软件所有权归天津大学 “43教D107室” 所有,作为某19级研究生毕业内容的部分；如有疑问，【点击】—意见反馈-与我们交流</string>
+    <string name="exitInforms">是否退出本次登录？</string>
+    <string name="wait_for_login">正在上传识别...</string>
+    <string name="appName">混凝土裂缝识别检测</string>
+    <string name="content_warning">请输入新的主机ip地址，否则无法登录？</string>
+</resources>

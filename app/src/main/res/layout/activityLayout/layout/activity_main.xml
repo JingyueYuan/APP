@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/mainLayout"
+    tools:context=".activity.MainActivity">
+
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tb_leftImageResource="@null"
+        app:tb_titleText="@string/appName"
+        app:tb_useThemeColor="false"
+        android:background="@color/xui_config_color_titlebar"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/viewPager2"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F9F9F9"
+        android:layout_gravity="bottom"
+        app:tabIndicatorColor="@null"
+        app:tabPaddingTop="2dp"
+        app:tabSelectedTextColor="@color/xui_config_color_main_theme"/>
+</LinearLayout>
