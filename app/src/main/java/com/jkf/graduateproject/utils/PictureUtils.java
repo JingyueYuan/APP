@@ -18,7 +18,7 @@ public class PictureUtils {
     //==========图片选择===========//
 
     /**
-     * 获取图片选择的配置
+     *
      *
      * @param fragment
      * @return

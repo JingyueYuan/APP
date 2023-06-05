@@ -27,9 +27,9 @@ import java.util.Set;
 
 public class myRationaleDialog extends RationaleDialog {
     private Context context;
-    //权限组合
+    //
     HashMap<String, String> permissionMap = new HashMap<String, String>();
-    //提示信息
+    //
     private String text = "";
     private List<String> deniedList = new ArrayList();
     private Set<String> groupSet = new HashSet<>();

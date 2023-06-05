@@ -45,7 +45,7 @@
                     style="@style/TextStyle.Explain"
                     android:layout_gravity="end|center_vertical"
                     android:layout_marginStart="4dp"
-                    android:text="43教D107室"
+                    android:text="43D107"
                     android:textColor="@color/xui_config_color_pure_black" />
 
                 <TextView
@@ -53,7 +53,7 @@
                     style="@style/TextStyle.Explain"
                     android:layout_gravity="end|center_vertical"
                     android:layout_marginStart="4dp"
-                    android:text="大气"
+                    android:text="Air"
                     android:paddingStart="40dp"
                     android:textColor="@color/xui_config_color_pure_black" />
             </LinearLayout>
@@ -63,7 +63,7 @@
                 style="@style/TextStyle.Explain"
                 android:paddingStart="12dp"
                 android:layout_gravity="end|center_vertical"
-                android:text="大气" />
+                android:text="Air" />
 
         </FrameLayout>
 
@@ -86,7 +86,7 @@
                     android:gravity="start|center_vertical"
                     android:maxLines="2"
                     android:singleLine="false"
-                    android:text="水工混凝土裂缝智能识别检测系统研究与设计"
+                    android:text="Intelligent identification and detection system for hydraulic concrete cracks"
                     android:textColor="@color/xui_config_color_pure_black" />
 
                 <TextView
@@ -97,7 +97,7 @@
                     android:gravity="start|center_vertical"
                     android:maxLines="2"
                     android:singleLine="false"
-                    android:text="本软件主要用于不同环境裂缝识别检测，解决水下和大气中混凝土裂缝的检测与识别，将记录保存再本地并展示。。。。"
+                    android:text="This software is mainly used for different environment crack identification detection, solving the detection and identification of concrete cracks underwater and in the atmosphere, saving the records again locally and displaying 。。。。"
                     android:textColor="?attr/xui_config_color_content_text" />
 
             </LinearLayout>

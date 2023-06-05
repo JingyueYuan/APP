@@ -41,11 +41,11 @@ public class MutiRequestboby extends RequestBody {
         if(totalLength==0L){
             totalLength = contentLength();
         }
-        //ForWardingSink为抽象方法，所以咱们继承然后重写其方法
+        //ForWardingSink
         MyForwardingSink myForwardingSink = new MyForwardingSink(bufferedSink);
         BufferedSink sink = Okio.buffer(myForwardingSink);
         multipartBody.writeTo(sink);
-        // 刷新
+        //
         sink.flush();
     }
 

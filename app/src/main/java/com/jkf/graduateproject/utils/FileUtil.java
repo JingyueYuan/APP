@@ -48,7 +48,7 @@ public class FileUtil {
 
 
     /*
-    返回文件的路径
+
      */
     public static String getFileAbsolutePath(Context context, Uri imageUri) {
         if (context == null || imageUri == null) {
@@ -319,10 +319,7 @@ public class FileUtil {
     }
 
     /*
-    模拟数据加载，后期数据的加载通过此方法，
-    模拟分页：每次加载的数据大小为4个Singlefom的数据
-    保存时的层级都为 ：GraduateProject/Username/timestamp/Singlefom
-    单个的Singlefom我们包含三个文件，两张图片和单个txt,主要的信息存在txt内部，咱们直接进行加载即可
+
      */
     /**
      *
@@ -338,18 +335,18 @@ public class FileUtil {
             return currenList;
         }
         File [] files = file.listFiles();
-        //判断大小进行对比
+        //
         int allFile = files.length;
-        //判断终止加载的位置
+        //
         int index = Math.min(allFile, currentSize + pageCount);
-        //数据的装载
+        //
         for(int m = currentSize;m < index; m++){
             File sondir = files[m];
-            //错误情况下为单个文件
+            //
             if(sondir.isFile()){
                 continue;
             }
-            //正常为文件夹，且包含三个文件
+            //
             else{
                 File[] innerFile = sondir.listFiles();
                 if(innerFile == null || innerFile.length!=3){
@@ -365,28 +362,28 @@ public class FileUtil {
                                 String line;
                                 SingleInfom singleInfom = new SingleInfom();
                                 while((line=bufferedReader.readLine())!=null){
-                                    if(line.contains("识别时间")){
+                                    if(line.contains("Identification time")){
                                         singleInfom.setCrackTime(line.split(":",2)[1]);
                                     }
-                                    else if(line.contains("裂缝长度")){
+                                    else if(line.contains("Crack length")){
                                         singleInfom.setCrackLength(line.split(":",2)[1]);
-                                    }else if(line.contains("裂缝面积")){
+                                    }else if(line.contains("Crack area")){
                                         singleInfom.setCrackArea(line.split(":",2)[1]);
-                                    }else if(line.contains("最大宽度")){
+                                    }else if(line.contains("Max width")){
                                         singleInfom.setCrack_maxWidth(line.split(":",2)[1]);
-                                    }else if(line.contains("实际宽度")){
+                                    }else if(line.contains("Actual width")){
                                         singleInfom.setCrack_realWidth(line.split(":",2)[1]);
                                     }
-                                    else if(line.contains("原图路径")){
+                                    else if(line.contains("Original Image Path")){
                                         singleInfom.setCrakOriginalPath(line.split(":",2)[1]);
                                     }
-                                    else if(line.contains("裂缝路径")){
+                                    else if(line.contains("Crack path")){
                                         singleInfom.setCrackPath(line.split(":",2)[1]);
                                     }
-                                    else if(line.contains("种类")){
+                                    else if(line.contains("Kind")){
                                         singleInfom.setKind(line.split(":",2)[1]);
                                     }
-                                    else if(line.contains("裂缝描述")){
+                                    else if(line.contains("Crack description")){
                                         singleInfom.setDescription(line.split(":",2)[1]);
                                     }
                                 }
@@ -418,21 +415,21 @@ public class FileUtil {
             return currenList;
         }
         File [] files = file.listFiles();
-        //保证后后识别的永远再后面
+        //
         Arrays.sort(files);
-        //判断大小进行对比
+        //
         int allFile = files.length;
-        //判断终止加载的位置
+        //
         int index = Math.min(allFile, currentSize + pageCount);
 
-        //数据的装载
+        //
         for(int m = currentSize;m < index; m++){
             File sondir = files[m];
-            //错误情况下为单个文件
+            //
             if(sondir.isFile()){
                 continue;
             }
-            //正常为文件夹，且包含三个文件
+            //
             else{
                 File[] innerFile = sondir.listFiles();
                 if(innerFile == null || innerFile.length!=3){
@@ -469,7 +466,7 @@ public class FileUtil {
      */
     public static void saveTxtFile(SingleInfom singleInfo,String txtPath){
         File file = new File(txtPath);
-        //没有就创建文件
+        //
         if(file.exists()){
             file.delete();
         }

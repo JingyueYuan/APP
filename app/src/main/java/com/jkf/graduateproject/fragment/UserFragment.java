@@ -66,7 +66,7 @@ public class UserFragment extends Fragment {
         initView();
         return view;
     }
-    //控件参数设置
+    //
     private void initView() {
         userId.setLeftString(myApp.getInstance().getUserName());
     }
@@ -74,7 +74,7 @@ public class UserFragment extends Fragment {
     void onUserClick(){
         new MaterialDialog.Builder(activity)
                 .iconRes(R.drawable.icon_tip)
-                .title("退出登录")
+                .title("Logout")
                 .content(R.string.exitInforms)
                 .positiveText(R.string.lab_submit)
                 .negativeText(R.string.lab_cancel)
@@ -90,29 +90,29 @@ public class UserFragment extends Fragment {
                 .show();
     }
 
-    //关于软件
+    //
     @OnClick(R.id.aboutSetting)
     void onClick() {
         new MaterialDialog.Builder(activity)
                 .iconRes(R.drawable.icon_tip)
-                .title("关于软件")
+                .title("About the software")
                 .content(R.string.aboutSoft)
                 .positiveText(R.string.lab_submit)
                 .cancelable(false)
                 .show();
     }
 
-    //意见反馈，此处可以输入任何信息，便于联系沟通
+    //
     @OnClick(R.id.sugestSetting)
     void onSuggetsClick(){
         MaterialDialog dialog = new MaterialDialog.Builder(activity)
                 .iconRes(R.drawable.icon_tip)
-                .title("意见反馈")
+                .title("Feedback")
                 .content(R.string.suggetContact)
                 .inputType(
                         InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
                                 )
-                .input("请输入您的联系方式",
+                .input("Please enter your contact information.",
                         "",
                         true,
                         new MaterialDialog.InputCallback() {
@@ -133,7 +133,7 @@ public class UserFragment extends Fragment {
             public void onClick(View view) {
                 String message = dialog.getInputEditText().getText().toString().trim();
                 if(message.isEmpty()){
-                    XToast.error(activity,"联系方式不能为空或者【取消】反馈").show();
+                    XToast.error(activity,"Contact information cannot be empty").show();
                 }
                 else if(checkEmail(message) | checkMobile(message)){
                     HashMap<String,String> map = new HashMap<String,String>();
@@ -143,7 +143,7 @@ public class UserFragment extends Fragment {
                         @Override
                         public void onFailure(Call call, Exception e) {
                             Looper.prepare();
-                            XToast.error(activity,"服务器异常，请稍后再试...").show();
+                            XToast.error(activity,"Server exception, please try again later...").show();
                             Looper.loop();
                         }
 
@@ -151,7 +151,7 @@ public class UserFragment extends Fragment {
                         public void onResponse(Call call, Response response) throws IOException {
                             if(response.code()==200){
                                 Looper.prepare();
-                                XToast.success(activity, "稍后作者将会与您联系...").show();
+                                XToast.success(activity, "The author will be in touch with you later...").show();
                                 Looper.loop();
                             }
                         }
@@ -159,7 +159,7 @@ public class UserFragment extends Fragment {
                     dialog.dismiss();
                 }
                 else {
-                    XToast.error(activity,"一般以电话或邮箱作为常用联系方式...").show();
+                    XToast.error(activity,"Generally use phone or email as the common contact...").show();
                     dialog.getInputEditText().setText("");
                 }
             }

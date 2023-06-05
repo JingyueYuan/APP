@@ -22,15 +22,15 @@
                 app:sLeftIconHeight="50dp"
                 app:sLeftIconWidth="50dp"
                 app:sLeftIconRes="@drawable/icon_head_default"
-                app:sLeftTextString="帐号管理"
-                app:sRightTextString="退出登录"
+                app:sLeftTextString="Account Management"
+                app:sRightTextString="Log out"
                 app:sRightTextColor="@color/xui_config_color_main_theme"
                 app:sLeftViewMarginLeft="10dp" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 style="@style/InfoItem.Account"
                 android:layout_height="60dp"
-                app:sLeftTextString="头像">
+                app:sLeftTextString="Avatar">
 
                 <com.xuexiang.xui.widget.imageview.RadiusImageView
                     android:id="@+id/riv_head_pic"
@@ -49,17 +49,17 @@
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 style="@style/InfoItem.Account"
-                app:sLeftTextString="通知设置" />
+                app:sLeftTextString="Settings" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 style="@style/InfoItem.Account"
-                app:sLeftTextString="账号与安全"
-                app:sRightTextString="已保护" />
+                app:sLeftTextString="Account and Security"
+                app:sRightTextString="Protected" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 style="@style/InfoItem.Account"
                 app:sDividerLineType="none"
-                app:sLeftTextString="设置中心" />
+                app:sLeftTextString="Setup Center" />
 
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
@@ -67,14 +67,14 @@
                 android:id="@+id/sugestSetting"
                 android:layout_marginTop="50dp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="意见反馈" />
+                app:sLeftTextString="Feedback" />
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 style="@style/InfoItem.Account"
                 android:id="@+id/aboutSetting"
                 android:layout_marginTop="20dp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="关于软件" />
+                app:sLeftTextString="About the software" />
         </LinearLayout>
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 

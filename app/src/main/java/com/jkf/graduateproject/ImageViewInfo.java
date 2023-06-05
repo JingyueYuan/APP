@@ -9,11 +9,11 @@ import com.xuexiang.xui.widget.imageview.preview.enitity.IPreviewInfo;
 
 public class ImageViewInfo implements IPreviewInfo {
 
-    private String mUrl;  //图片地址
-    private Rect mBounds; // 记录坐标
+    private String mUrl;  //
+    private Rect mBounds; //
     private String mVideoUrl;
 
-    private String mDescription = "描述信息";
+    private String mDescription = "Description";
 
     public ImageViewInfo(String url) {
         mUrl = url;

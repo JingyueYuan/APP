@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:id="@+id/headtip"
             android:textSize="20sp"
-            android:text="修改密码"
+            android:text="Change password"
             android:textColor="#ffffff"/>
     </androidx.appcompat.widget.Toolbar>
 
@@ -42,7 +42,7 @@
             android:id="@+id/input_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入账号"
+            android:hint="Please enter your account number"
             android:textSize="20sp"
             android:inputType="number"
             app:cet_clearIcon="@drawable/delet_login"
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:hint="设置密码"
+            android:hint="Set password"
             android:textSize="20sp"
             android:inputType="textPassword"
             android:textAlignment="viewStart"
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:hint="重复密码"
+            android:hint="Repeat Password"
             android:textSize="20sp"
             android:inputType="textPassword"
             android:textAlignment="viewStart"
@@ -99,7 +99,7 @@
 
     <com.xuexiang.xui.widget.button.ButtonView
         android:id="@+id/btnView"
-        android:text="确 定"
+        android:text="OK"
         android:textSize="18sp"
         style="@style/ButtonView.Blue"
         android:layout_gravity="center"

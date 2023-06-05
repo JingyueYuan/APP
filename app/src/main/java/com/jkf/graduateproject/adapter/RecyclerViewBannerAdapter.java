@@ -22,12 +22,12 @@ import java.util.Arrays;
 public class RecyclerViewBannerAdapter extends BaseRecyclerAdapter<Integer> {
 
     /**
-     * 默认加载图片
+     *
      */
     private ColorDrawable mColorDrawable;
 
     /**
-     * 是否允许进行缓存
+     *
      */
     private boolean mEnableCache = true;
 
@@ -44,7 +44,7 @@ public class RecyclerViewBannerAdapter extends BaseRecyclerAdapter<Integer> {
     }
 
     /**
-     * 适配的布局
+     *
      *
      * @param viewType
      * @return
@@ -55,7 +55,7 @@ public class RecyclerViewBannerAdapter extends BaseRecyclerAdapter<Integer> {
     }
 
     /**
-     * 绑定数据
+     *
      *
      * @param holder
      * @param position
@@ -80,7 +80,7 @@ public class RecyclerViewBannerAdapter extends BaseRecyclerAdapter<Integer> {
     }
 
     /**
-     * 设置是否允许缓存
+     *
      *
      * @param enableCache
      * @return
@@ -91,7 +91,7 @@ public class RecyclerViewBannerAdapter extends BaseRecyclerAdapter<Integer> {
     }
 
     /**
-     * 获取是否允许缓存
+     *
      *
      * @return
      */

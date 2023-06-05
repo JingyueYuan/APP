@@ -58,7 +58,7 @@
             android:background="@drawable/positive_button_bg"
             android:textColor="#fff"
             android:textSize="16sp"
-            android:text="确 定"/>
+            android:text="OK"/>
 
     </LinearLayout>
 

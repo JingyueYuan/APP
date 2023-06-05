@@ -52,7 +52,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity  {
 
     @BindView(R.id.titlebar) TitleBar titleBar;
-    //用于记录返回的点击时间
+    //
     private long lastBackTime = 0L;
     @BindView(R.id.viewPager2) ViewPager2 mViewPager;
     @BindView(R.id.mainLayout)
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity  {
     private MyPagerAdapter pagerAdapter;
 
 
-    public static final String[] mTitles = {"记录", "识别","设置"};
+    public static final String[] mTitles = {"Record", "Identify","Set"};
     public static final int[] drawableList ={R.drawable.tab_icon1,R.drawable.tab_icon2,R.drawable.tab_icon3};
 
     private List<Fragment> mPageMap = new ArrayList<>();
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity  {
         init_view();
         //初始化tabbar
         init_tab();
-        Log.i("XML","我不走cReate");
+        Log.i("XML","cReate");
 
     }
 
@@ -91,10 +91,10 @@ public class MainActivity extends AppCompatActivity  {
         mViewPager.setAdapter(pagerAdapter);
     }
     /*
-    tab与viewPager2的绑定操作
+
      */
     private void init_tab() {
-        //页面可以滑动,二者联动
+        //
         new TabLayoutMediator(mTabbar, mViewPager, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
@@ -108,14 +108,14 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-    /*多次点击返回
+    /*
      */
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode==KeyEvent.KEYCODE_BACK){
             if(System.currentTimeMillis()-lastBackTime>2000){
-                XToast.warning(this,"再次点击退出此软件").show();
+                XToast.warning(this,"Click again to exit this software").show();
                 lastBackTime = System.currentTimeMillis();
                 return false;
             }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i("XML","我直接复活");
+        Log.i("XML","I came straight back to life");
     }
 
     public ViewPager2 getLayout() {

@@ -50,12 +50,12 @@ import qiu.niorgai.StatusBarCompat;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    @BindView(R.id.rg_userEV) EditText userEV;  //账号信息
-    @BindView(R.id.rg_user_delet) ImageView user_delet;  //删除按钮
-    @BindView(R.id.rg_ps_visible) ImageView ps_visible;   //密码是否可见
-    @BindView(R.id.rg_psEV) EditText psEV;   //密码信息
-    @BindView(R.id.rg_ps_delet) ImageView ps_delet;   //密码删除按钮
-    @BindView(R.id.rg_submit) Button submit;   //登录按钮
+    @BindView(R.id.rg_userEV) EditText userEV;  //
+    @BindView(R.id.rg_user_delet) ImageView user_delet;  //
+    @BindView(R.id.rg_ps_visible) ImageView ps_visible;   //
+    @BindView(R.id.rg_psEV) EditText psEV;   //
+    @BindView(R.id.rg_ps_delet) ImageView ps_delet;   //
+    @BindView(R.id.rg_submit) Button submit;   //
     @BindView(R.id.toolbar) Toolbar toolbar;
 
     @Override
@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        //账户信息的监听，是否开始输入
+        //
         userEV.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -95,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-        //密码信息的监听，是否开始输入
+        //
         psEV.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -112,45 +112,43 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-        //是否记住密码，监听
+        //
     }
 
-    //账户删除控件
+    //
     @OnClick(R.id.rg_user_delet)
     void onClick(){
         userEV.setText("");
     }
-    //密码删除按钮
+    //
     @OnClick(R.id.rg_ps_delet)
     void onClickPS_delet(){
         psEV.setText("");
     }
-    //密码是否可见
+    //
     @OnClick(R.id.rg_ps_visible)
     void onPS_visibleClick(View view){
         if(view.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.visible).getConstantState())){
             view.setBackgroundResource(R.drawable.invisible);
             psEV.setInputType(129);
-            Selection.setSelection(psEV.getText(),psEV.getText().length());   //设置光标的位置
+            Selection.setSelection(psEV.getText(),psEV.getText().length());   //
         }else {
             view.setBackgroundResource(R.drawable.visible);
             psEV.setInputType(128);
-            Selection.setSelection(psEV.getText(),psEV.getText().length());   //设置光标的位置
+            Selection.setSelection(psEV.getText(),psEV.getText().length());   //
         }
     }
-    //注册信息逻辑，在此处后期需要联网控制，验证登录
+    //
     /*
-    首先检验检验输入的信息
-    okhttp3上传网址，并验证
-    根据不同的返回结果进行不同的提示
+
      */
     @OnClick(R.id.rg_submit)
     void onSubmitClick(){
-        //检查是否为空
-        //检测密码是否为空，然后进行提醒
+        //
+        //
         boolean isCanClickable = judgeUserNamePassWord();
         if(isCanClickable){
-            //与服务器进行交互，验证结果是否正确
+            //
             judgeInServer();
         }
         else{
@@ -158,14 +156,14 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    //判断用户名与密码的合理性
+    //
     private boolean judgeUserNamePassWord() {
 
         if(userEV.getText().length()>=8 && psEV.getText().length()>=8){
             return true;
         }
         else {
-            XToast.error(this,"账户与密码至少需要8个字符",Toast.LENGTH_SHORT).show();
+            XToast.error(this,"Accounts and passwords need to be at least 8 characters long.",Toast.LENGTH_SHORT).show();
             userEV.setText("");
             psEV.setText("");
             return false;
@@ -173,7 +171,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     /*
-   与服务器进行交互，判断是否存在数据库
+
     */
     private void judgeInServer() {
         String url = "";
@@ -197,15 +195,15 @@ public class RegisterActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //输入新的iphost
+                        //iphost
                         new MaterialDialog.Builder(RegisterActivity.this)
                                 .iconRes(R.drawable.icon_tip)
-                                .title("提示")
+                                .title("Tips")
                                 .content(R.string.content_warning)
                                 .inputType(
                                         InputType.TYPE_NUMBER_FLAG_DECIMAL)
                                 .input(
-                                        "服务器IP地址",
+                                        "IP",
                                         "",
                                         true,
                                         new MaterialDialog.InputCallback() {
@@ -216,8 +214,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         }
                                 )
                                 .inputRange(0, 14)
-                                .positiveText("确定")
-                                .negativeText("取消")
+                                .positiveText("OK")
+                                .negativeText("Cancel")
                                 .onPositive(new MaterialDialog.SingleButtonCallback() {
                                     @Override
                                     public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
@@ -230,7 +228,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             ShareUtils.setString(RegisterActivity.this,"IPHost",temp);
                                         }
                                         else{
-                                            XToast.error(RegisterActivity.this,"ip格式不正确").show();
+                                            XToast.error(RegisterActivity.this,"Wrong ip").show();
                                             dialog.getInputEditText().setText("");
                                         }
                                     }
@@ -255,16 +253,16 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.e("XML",response.message().toString());
                 Log.e("XML",response.code()+"");
                 Looper.prepare();
-                // 123  注册成功
+                //
                 if(respCode.SUCCESS.getCode().equals(str)){
-                    XToast.normal(RegisterActivity.this,"注册成功，即将跳转登录。。。").show();
+                    XToast.normal(RegisterActivity.this,"Registration is successful and will soon jump to login.").show();
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            //将登录信息带回
+                            //
                             Intent intent = new Intent();
                             ArrayList<String> arrayList = new ArrayList<String>();
-                            //账号在前，密码在后
+                            //
                             arrayList.add(userEV.getText().toString().trim());
                             arrayList.add(psEV.getText().toString().trim());
                             intent.putStringArrayListExtra("register",arrayList);
@@ -274,11 +272,11 @@ public class RegisterActivity extends AppCompatActivity {
                     },1000);
 
                 }else if(respCode.ALLWAYS.getCode().equals(str)){
-                    XToast.info(RegisterActivity.this,"此账号已经被使用，请更换新的账号").show();
+                    XToast.info(RegisterActivity.this,"This account has already been used, please change to a new account").show();
                     userEV.setText("");
                     psEV.setText("");
                 }else{
-                    XToast.info(RegisterActivity.this,"发生未知错误，请退出重进。。。").show();
+                    XToast.info(RegisterActivity.this,"An unknown error occurred, please exit and re-enter.").show();
                 }
                 Looper.loop();
             }

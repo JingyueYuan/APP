@@ -43,10 +43,10 @@ import static androidx.recyclerview.widget.OrientationHelper.VERTICAL;
 
 public class RecordFragment extends Fragment {
 
-    @BindView(R.id.bl_horizontal) myBannerLayout bl_horizontal; //轮播图
-    @BindView(R.id.recyclerView)  LinkageRecyclerView recyclerView; //展示用的RecycView
-    @BindView(R.id.lsl_container) LinkageScrollLayout lslContainer;  //包含主要内容的 -- 内联布局
-    @BindView(R.id.refreshLayout) SmartRefreshLayout refreshLayout;  //刷新的布局
+    @BindView(R.id.bl_horizontal) myBannerLayout bl_horizontal; //
+    @BindView(R.id.recyclerView)  LinkageRecyclerView recyclerView; //
+    @BindView(R.id.lsl_container) LinkageScrollLayout lslContainer;  //
+    @BindView(R.id.refreshLayout) SmartRefreshLayout refreshLayout;  //
 
     private MainActivity activity;
 
@@ -65,7 +65,7 @@ public class RecordFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.record_fragment,container, false);
-        String title = getArguments().getString("text","默认数值");
+        String title = getArguments().getString("text","Default Value");
         ButterKnife.bind(this,view);
         initView();
         return view;
@@ -79,9 +79,9 @@ public class RecordFragment extends Fragment {
     }
 
     private void initView() {
-        //轮播图设置适配器
+        //
         bl_horizontal.setAdapter(new RecyclerViewBannerAdapter(imagePath));
-        //下拉刷新
+        //
         recyclerView.setAdapter(recViewShowAdapter = new RecViewShowAdapter());
         recyclerView.setLayoutManager(new XLinearLayoutManager(recyclerView.getContext()));
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), VERTICAL, 0));
@@ -98,13 +98,13 @@ public class RecordFragment extends Fragment {
 
         }, 1000));
 
-        refreshLayout.autoRefresh();//第一次进入触发自动刷新，演示效果
+        refreshLayout.autoRefresh();//
 
-        //设置详情界面，点击之后跳转详情界面
+        //
         recViewShowAdapter.setOnItemClickListener(new RecyclerViewHolder.OnItemClickListener<SingleInfom>() {
             @Override
             public void onItemClick(View itemView, SingleInfom item, int position) {
-                XToast.info(activity,"点击了"+position).show();
+                XToast.info(activity,"Click"+position).show();
                 Intent intent = new Intent(activity, DetailRecordActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("item",item);

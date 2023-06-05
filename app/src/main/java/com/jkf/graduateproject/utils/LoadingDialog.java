@@ -17,7 +17,7 @@ public class LoadingDialog {
 
     private LoadingDialog(Context context) {
         MaterialDialog.Builder builder = new MaterialDialog.Builder(context)
-                .title("提示")
+                .title("Tips")
                 .iconRes(R.drawable.icon_tip)
                 .limitIconToDefaultSize()
                 .content(R.string.wait_for_login)

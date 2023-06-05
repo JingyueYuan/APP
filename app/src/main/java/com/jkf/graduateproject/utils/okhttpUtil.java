@@ -52,14 +52,14 @@ public class okhttpUtil {
 
     public okhttpUtil() {
         client = new OkHttpClient.Builder()
-                .connectTimeout(500, TimeUnit.MILLISECONDS)      //设置连接超时
-                .readTimeout(500, TimeUnit.MILLISECONDS)         //设置读超时
-                .writeTimeout(500, TimeUnit.MILLISECONDS)        //设置写超时
-                .retryOnConnectionFailure(true)            //是否自动重连
+                .connectTimeout(500, TimeUnit.MILLISECONDS)      //
+                .readTimeout(500, TimeUnit.MILLISECONDS)         //
+                .writeTimeout(500, TimeUnit.MILLISECONDS)        //
+                .retryOnConnectionFailure(true)            //
                 .build();
     }
 
-    //登录与注册上传少量的key-value对象，便于我们进行登录、注册
+    //
     public static void postMultyBoby(String url, File file,okhttpListener listener){
         setImageLoadClient();
         MultipartBody.Builder mBuilder = new MultipartBody.Builder()
@@ -102,26 +102,26 @@ public class okhttpUtil {
         });
     }
     /*
-    此方法只要针对于图片上传，设置的时间较长
+
      */
     public  static void setImageLoadClient(){
         okhttpUtil.client = new OkHttpClient.Builder()
-                .connectTimeout(10000, TimeUnit.MILLISECONDS)      //设置连接超时
-                .readTimeout(30000, TimeUnit.MILLISECONDS)         //设置读超时
-                .writeTimeout(30000, TimeUnit.MILLISECONDS)        //设置写超时
-                .retryOnConnectionFailure(true)            //是否自动重连
+                .connectTimeout(10000, TimeUnit.MILLISECONDS)      //
+                .readTimeout(30000, TimeUnit.MILLISECONDS)         //
+                .writeTimeout(30000, TimeUnit.MILLISECONDS)        //
+                .retryOnConnectionFailure(true)            //
                 .build();
     }
 
     /*
-   此方法只要针对于图片上传，设置的时间较段
+
     */
     public  void setFormsLoadClient(){
         okhttpUtil.client = new OkHttpClient.Builder()
-                .connectTimeout(1000, TimeUnit.MILLISECONDS)      //设置连接超时
-                .readTimeout(1000, TimeUnit.MILLISECONDS)         //设置读超时
-                .writeTimeout(1000, TimeUnit.MILLISECONDS)        //设置写超时
-                .retryOnConnectionFailure(true)            //是否自动重连
+                .connectTimeout(1000, TimeUnit.MILLISECONDS)      //
+                .readTimeout(1000, TimeUnit.MILLISECONDS)         //
+                .writeTimeout(1000, TimeUnit.MILLISECONDS)        //
+                .retryOnConnectionFailure(true)            //
                 .build();
     }
 }

@@ -42,7 +42,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class ForgetPWActivity extends AppCompatActivity {
-    //控件的绑定
+    //
     @BindView(R.id.toolbar)Toolbar toolbar;
     @BindView(R.id.input_layout_username) TextInputLayout input_layout_username;
     @BindView(R.id.input_username) ClearEditText input_username;
@@ -58,7 +58,7 @@ public class ForgetPWActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_p_w);
         ButterKnife.bind(this);
-        //初始化控件
+        //
         init_view();
     }
 
@@ -69,12 +69,12 @@ public class ForgetPWActivity extends AppCompatActivity {
                 finish();
             }
         });
-        //携带过来的账号信息
+        //
         input_username.setText(getIntent().getStringExtra("user"));
     }
 
     /**
-     * 用于展示错误的提示信息
+     *
      * @param inputLayout   布局
      * @param message   错误的消息
      */
@@ -86,24 +86,24 @@ public class ForgetPWActivity extends AppCompatActivity {
     }
     @OnClick(R.id.btnView)
     void onClick(){
-        //首先判空
+        //
         if(input_username.getText().toString().trim().isEmpty()){
-            showError(input_layout_username,"用户名不能为空");
+            showError(input_layout_username,"Username cannot be empty");
             return;
         }
         if(input_password.getText().toString().trim().isEmpty()){
-            showError(input_layout_password,"密码不能为空");
+            showError(input_layout_password,"Password cannot be empty");
             return;
         }
         if(input_password2.getText().toString().trim().isEmpty()){
-            showError(input_layout_password2,"密码不能为空");
+            showError(input_layout_password2,"Password cannot be empty");
             return;
         }
         if( ! input_password2.getText().toString().trim().equals(input_password.getText().toString().trim())){
-            showError(input_layout_password2,"两次输入的密码不一致");
+            showError(input_layout_password2,"The password entered twice does not match");
             return;
         }
-        //开始验证，利用okhttp3数据进行上传
+        //
         if(NetUtils.checkNet(ForgetPWActivity.this)){
             String url = "";
             if(!(ShareUtils.getString(this,"IPHost","").isEmpty())){
@@ -126,15 +126,15 @@ public class ForgetPWActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            //输入新的iphost
+                            //
                             new MaterialDialog.Builder(ForgetPWActivity.this)
                                     .iconRes(R.drawable.icon_tip)
-                                    .title("提示")
+                                    .title("Tips")
                                     .content(R.string.content_warning)
                                     .inputType(
                                             InputType.TYPE_NUMBER_FLAG_DECIMAL)
                                     .input(
-                                            "服务器IP地址",
+                                            "IP",
                                             "",
                                             true,
                                             new MaterialDialog.InputCallback() {
@@ -145,8 +145,8 @@ public class ForgetPWActivity extends AppCompatActivity {
                                             }
                                     )
                                     .inputRange(0, 14)
-                                    .positiveText("确定")
-                                    .negativeText("取消")
+                                    .positiveText("OK")
+                                    .negativeText("Cancel")
                                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                                         @Override
                                         public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
@@ -177,9 +177,9 @@ public class ForgetPWActivity extends AppCompatActivity {
                     Log.e("XML",response.message().toString());
                     Log.e("XML",response.code()+"");
                     Looper.prepare();
-                    // 159--->修改成功
+                    // 159--->
                     if(respCode.EDITPWSUCC.getCode().equals(str)){
-                        XToast.normal(ForgetPWActivity.this,"修改成功，即将跳转登录。。。。").show();
+                        XToast.normal(ForgetPWActivity.this,"Modified successfully, about to jump to login 。。。。").show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -192,11 +192,11 @@ public class ForgetPWActivity extends AppCompatActivity {
                                 finish();
                             }
                         },1000);
-                        // 357 ---> 修改失败
+                        // 357 --->
                     }else if(respCode.EDITPWFAIL.getCode().equals(str)){
-                        XToast.info(ForgetPWActivity.this,"此用户先注册").show();
+                        XToast.info(ForgetPWActivity.this,"This user registers first").show();
                     }else{
-                        XToast.info(ForgetPWActivity.this,"发生未知错误，请退出重新进入。。。").show();
+                        XToast.info(ForgetPWActivity.this,"An unknown error occurred, please exit and re-enter.").show();
                     }
                     Looper.loop();
                 }

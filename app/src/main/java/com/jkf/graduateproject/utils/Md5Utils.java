@@ -16,8 +16,7 @@ import javax.crypto.spec.IvParameterSpec;
 
 public class Md5Utils {
     /*
-    默认为大小32为的MD5加密方式，返回字符串长度为32
-    如果是16位的加密方式的情况，只需要在32位的基础上返回8-24的16个字符  ---- md532.substring(8,24)
+
      */
     public static String Md5Decode(String info){
         try {
@@ -40,7 +39,7 @@ public class Md5Utils {
     }
 
     /*
-    DES 加解密，双向的操作
+
      */
     private static final String ALGORITHM_DES = "DES/CBC/PKCS5Padding";
     private static final String IVKEY = "graduate";

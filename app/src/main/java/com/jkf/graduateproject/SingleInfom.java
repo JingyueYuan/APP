@@ -10,12 +10,12 @@ public class SingleInfom implements Serializable {
     private String crackLength;
     private String crackArea;
     private String crack_maxWidth;
-    private String crackPath; //处理之后图片路径
-    private String crakOriginalPath;  //原图
-    private String kind;  //用于区分大气或者水下
-    private String description;   //自己描述的话语
-    private String crack_meanWidth;   //平均宽度
-    private String crack_realWidth;   //实际宽度
+    private String crackPath; //
+    private String crakOriginalPath;  //
+    private String kind;  //
+    private String description;   //
+    private String crack_meanWidth;   //
+    private String crack_realWidth;   //
 
     public SingleInfom() {
 

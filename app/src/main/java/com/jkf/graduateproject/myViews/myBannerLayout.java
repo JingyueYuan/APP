@@ -21,7 +21,7 @@ public class myBannerLayout extends BannerLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        getParent().requestDisallowInterceptTouchEvent(true);  //设置不拦截
+        getParent().requestDisallowInterceptTouchEvent(true);  //
         return super.dispatchTouchEvent(ev);
     }
 }

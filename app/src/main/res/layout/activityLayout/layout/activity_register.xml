@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:id="@+id/headtip"
             android:textSize="20sp"
-            android:text="用户注册"
+            android:text="User Registration"
             android:textColor="#ffffff" />
     </androidx.appcompat.widget.Toolbar>
 
@@ -122,7 +122,7 @@
         android:layout_below="@+id/linear2"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
-        android:text="注 册"
+        android:text="Registration"
         android:background="@drawable/submitbg1"
         android:textColor="#FFFFFF"
         android:textSize="20sp"/>

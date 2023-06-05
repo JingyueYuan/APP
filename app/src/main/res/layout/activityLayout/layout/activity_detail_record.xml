@@ -21,8 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tb_leftImageResource="@drawable/icon_back_white"
-                app:tb_leftText="退出"
-                app:tb_titleText="详情"
+                app:tb_leftText="Logout"
+                app:tb_titleText="Detail"
                 app:tb_useThemeColor="false"
                 app:layout_scrollFlags="scroll"
                 android:background="@color/xui_config_color_titlebar"/>
@@ -45,7 +45,7 @@
                 android:layout_height="50dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="原 图"
+                app:sLeftTextString="Original image"
                 app:sRightIconRes="@drawable/ic_arrow_right"
                 app:sRightViewMarginRight="0dp" />
 
@@ -81,7 +81,7 @@
                 android:layout_marginTop="10dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="识 别"
+                app:sLeftTextString="Identification"
                 app:sRightIconRes="@drawable/ic_arrow_right"
                 app:sRightViewMarginRight="0dp" />
 
@@ -117,7 +117,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="识别类型:"/>
+                app:sLeftTextString="Kind"/>
 
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
@@ -127,7 +127,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="裂缝面积:"/>
+                app:sLeftTextString="Crack area"/>
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:layout_width="match_parent"
@@ -136,7 +136,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="裂缝长度:"/>
+                app:sLeftTextString="Crack length"/>
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="平均宽度:"/>
+                app:sLeftTextString="Crack meanWidth"/>
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:layout_width="match_parent"
@@ -154,7 +154,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="实际宽度:"/>
+                app:sLeftTextString="Actual width"/>
 
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
@@ -165,7 +165,7 @@
                 android:visibility="gone"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="最大宽度:"/>
+                app:sLeftTextString="Max width"/>
 
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:layout_width="match_parent"
@@ -174,7 +174,7 @@
                 android:layout_marginTop="8dp"
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
-                app:sLeftTextString="识别时间:"/>
+                app:sLeftTextString="Time"/>
             <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                 android:id="@+id/detailRemark"
                 android:layout_width="match_parent"
@@ -183,7 +183,7 @@
                 app:sLeftTextSize="15sp"
                 app:sDividerLineType="none"
                 app:sLeftViewMarginLeft="10dp"
-                app:sLeftTextString="裂缝描述"
+                app:sLeftTextString="Detail remark"
                 app:sRightTextColor="@color/xui_config_color_main_theme"
                 app:sRightIconRes="@drawable/ic_arrow_right"
                 app:sRightTextSize="16sp"

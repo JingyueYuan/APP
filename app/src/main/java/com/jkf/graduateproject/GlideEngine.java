@@ -31,7 +31,6 @@ import com.luck.picture.lib.widget.longimage.SubsamplingScaleImageView;
 public class GlideEngine implements ImageEngine {
 
     /**
-     * 加载图片
      *
      * @param context
      * @param url
@@ -45,14 +44,14 @@ public class GlideEngine implements ImageEngine {
     }
 
     /**
-     * 加载网络图片适配长图方案
-     * # 注意：此方法只有加载网络图片才会回调
+     *
+     * #
      *
      * @param context
      * @param url
      * @param imageView
      * @param longImageView
-     * @param callback      网络图片加载回调监听 {link after version 2.5.1 Please use the #OnImageCompleteCallback#}
+     * @param callback       {link after version 2.5.1 Please use the #OnImageCompleteCallback#}
      */
     @Override
     public void loadImage(@NonNull Context context, @NonNull String url,
@@ -89,7 +88,7 @@ public class GlideEngine implements ImageEngine {
                             longImageView.setVisibility(eqLongImage ? View.VISIBLE : View.GONE);
                             imageView.setVisibility(eqLongImage ? View.GONE : View.VISIBLE);
                             if (eqLongImage) {
-                                // 加载长图
+                                //
                                 longImageView.setQuickScaleEnabled(true);
                                 longImageView.setZoomEnabled(true);
                                 longImageView.setDoubleTapZoomDuration(100);
@@ -98,7 +97,7 @@ public class GlideEngine implements ImageEngine {
                                 longImageView.setImage(ImageSource.bitmap(resource),
                                         new ImageViewState(0, new PointF(0, 0), 0));
                             } else {
-                                // 普通图片
+                                //
                                 imageView.setImageBitmap(resource);
                             }
                         }
@@ -107,14 +106,14 @@ public class GlideEngine implements ImageEngine {
     }
 
     /**
-     * 加载网络图片适配长图方案
-     * # 注意：此方法只有加载网络图片才会回调
+     *
+     * #
      *
      * @param context
      * @param url
      * @param imageView
      * @param longImageView
-     * @ 已废弃
+     * @
      */
     @Override
     public void loadImage(@NonNull Context context, @NonNull String url,
@@ -132,7 +131,7 @@ public class GlideEngine implements ImageEngine {
                             longImageView.setVisibility(eqLongImage ? View.VISIBLE : View.GONE);
                             imageView.setVisibility(eqLongImage ? View.GONE : View.VISIBLE);
                             if (eqLongImage) {
-                                // 加载长图
+                                //
                                 longImageView.setQuickScaleEnabled(true);
                                 longImageView.setZoomEnabled(true);
                                 longImageView.setDoubleTapZoomDuration(100);
@@ -141,7 +140,7 @@ public class GlideEngine implements ImageEngine {
                                 longImageView.setImage(ImageSource.bitmap(resource),
                                         new ImageViewState(0, new PointF(0, 0), 0));
                             } else {
-                                // 普通图片
+                                //
                                 imageView.setImageBitmap(resource);
                             }
                         }
@@ -150,7 +149,7 @@ public class GlideEngine implements ImageEngine {
     }
 
     /**
-     * 加载相册目录
+     *
      *
      * @param context   上下文
      * @param url       图片路径

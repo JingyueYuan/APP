@@ -5,7 +5,7 @@ import android.app.Application;
 import com.xuexiang.xui.XUI;
 
 public class myApp extends Application {
-    //全局的文件夹的名称
+    //
     private String userName;
     private static myApp myApplication;
     private String ipHost="";

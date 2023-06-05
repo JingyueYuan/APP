@@ -121,7 +121,7 @@
         android:layout_below="@id/linear2"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="9dp"
-        android:text="记住密码"
+        android:text="Remember password"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -132,7 +132,7 @@
         android:layout_below="@+id/repsCheck"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="登  录"
+        android:text="Login"
         android:background="@drawable/submitbg1"
         android:textColor="#FFFFFF"
         android:textSize="20sp"/>
@@ -153,7 +153,7 @@
             android:gravity="center_horizontal"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="忘记密码"
+            android:text="Forget your password"
             android:textColor="@color/black"/>
 
         <View
@@ -168,7 +168,7 @@
             android:gravity="center_horizontal"
             android:textSize="15sp"
             android:layout_weight="1"
-            android:text="用户注册"
+            android:text="User Registration"
             android:textColor="@color/black"/>
 
     </LinearLayout>
