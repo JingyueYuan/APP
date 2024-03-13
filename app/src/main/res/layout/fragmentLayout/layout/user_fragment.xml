@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:srlEnableOverScrollDrag="true"
+        app:srlEnablePureScrollMode="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                android:id="@+id/userId"
+                android:layout_height="60dp"
+                app:sLeftIconHeight="50dp"
+                app:sLeftIconWidth="50dp"
+                app:sLeftIconRes="@drawable/icon_head_default"
+                app:sLeftTextString="Account"
+                app:sRightTextString="Log out"
+                app:sRightTextColor="@color/xui_config_color_main_theme"
+                app:sLeftViewMarginLeft="10dp" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                android:layout_height="60dp"
+                app:sLeftTextString="Avatar">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/riv_head_pic"
+                    android:scaleType="centerCrop"
+                    app:riv_border_width="1px"
+                    app:riv_border_color="@color/xui_config_color_gray_4"
+                    app:riv_is_touch_select_mode_enabled="true"
+                    app:riv_is_circle="true"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/sRightImgId"
+                    app:srcCompat="@drawable/td" />
+
+            </com.xuexiang.xui.widget.textview.supertextview.SuperTextView>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                app:sLeftTextString="Notification" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                app:sLeftTextString="Security"
+                app:sRightTextString="Protected" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Settings Center" />
+
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                android:id="@+id/sugestSetting"
+                android:layout_marginTop="50dp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Feedback" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                style="@style/InfoItem.Account"
+                android:id="@+id/aboutSetting"
+                android:layout_marginTop="20dp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="About the App" />
+        </LinearLayout>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

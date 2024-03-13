@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="xui_round_btn_green_bg">#34FA54</color>
+    <color name="black">#585859</color>
+    <color name="activity_bg">#D9D9F8</color>
+    <color name="button_select">#F32E34</color>
+    <color name="text_selected">@color/xui_config_color_main_theme</color>
+    <color name="text_normal">#949593</color>
+
+
+    <color name="loadingDialog">#09AAFA</color>
+
+    <color name="color_f4">#F6C3C3</color>
+</resources>

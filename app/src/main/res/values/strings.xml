@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Patrol inspection of dam cracks</string>
+    <string name="content_simple_confirm_dialog" >Server Error!</string>
+    <string name="dialog_tips">Tip</string>
+    <string name="lab_submit">OK</string>
+    <string name="lab_cancel">Cancel</string>
+    <string name="netUnConneted">The network is not available. Please check if you are connected to the Internet!</string>
+    <string name="no_net_error">Error</string>
+    <string name="content_downloading">Downloading, please wait</string>
+    <string name="suggetContact">Please enter your contact information, click send, and we will contact you later!</string>
+    <string name="aboutSoft">This software is owned by Tianjin University, Room D107, Building 43</string>
+    <string name="exitInforms">Do you want to log out?</string>
+    <string name="wait_for_login">Uploading for recognition</string>
+    <string name="appName">Patrol inspection of dam cracks</string>
+    <string name="content_warning">Enter the new host IP address</string>
+</resources>

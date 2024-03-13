@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailRecordActivity">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/xui_config_color_main_theme"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+            <com.xuexiang.xui.widget.actionbar.TitleBar
+                android:id="@+id/detailToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tb_leftImageResource="@drawable/icon_back_white"
+                app:tb_leftText="Quit"
+                app:tb_titleText="Details"
+                app:tb_useThemeColor="false"
+                app:layout_scrollFlags="scroll"
+                android:background="@color/xui_config_color_titlebar"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailScrool"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/originalTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Original image"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightViewMarginRight="0dp" />
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/originalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/originalImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:riv_border_color="@color/xui_config_color_gray_6"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="15dp"
+                    app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                    app:riv_selected_border_width="1px"
+                    app:riv_selected_mask_color="@color/xui_config_color_gray_8" />
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/recognizedTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Identification"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightViewMarginRight="0dp" />
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/recognizedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/recognizedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:riv_border_color="@color/xui_config_color_gray_6"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="15dp"
+                    app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                    app:riv_selected_border_width="1px"
+                    app:riv_selected_mask_color="@color/xui_config_color_gray_8" />
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_kind"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Type"/>
+
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_area"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Area"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_length"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Length"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_meanWidth"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Average width"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_realWidth"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Actual width"/>
+
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_maxWidth"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="最大宽度:"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/crack_time"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Time"/>
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/detailRemark"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftViewMarginLeft="10dp"
+                app:sLeftTextString="Description"
+                app:sRightTextColor="@color/xui_config_color_main_theme"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightTextSize="16sp"
+                app:sRightViewMarginRight="8dp"/>
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/detailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+                <TextView
+                    android:id="@+id/detailTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:textSize="15sp"
+                    android:singleLine="false"
+                    android:ellipsize="end"
+                    android:background="@drawable/tv_bg"/>
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

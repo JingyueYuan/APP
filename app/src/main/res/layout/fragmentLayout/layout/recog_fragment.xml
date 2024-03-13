@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailScrool"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/kindTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                app:sDividerLineType="both"
+                app:sLeftTextString="In-air"
+                app:sRightViewType="switchBtn"
+                app:sSwitchIsChecked="true"
+                app:sLeftViewMarginLeft="10dp"
+                app:sThumbResource="@drawable/thumb"
+                app:sTrackResource="@drawable/track" />
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/startTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Original image"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightTextString="Import"
+                app:sRightTextColor="@color/xui_config_color_main_theme"
+                app:sRightTextSize="16sp"
+                app:sLeftViewMarginLeft="10dp"
+                app:sRightViewMarginRight="8dp" />
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/startLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/startImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:riv_border_color="@color/xui_config_color_gray_6"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="15dp"
+                    app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                    app:riv_selected_border_width="1px"
+                    app:riv_selected_mask_color="@color/xui_config_color_gray_8" />
+
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/endTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Identification"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightTextString="Upload"
+                app:sRightTextColor="@color/xui_config_color_main_theme"
+                app:sRightTextSize="16sp"
+                app:sLeftViewMarginLeft="10dp"
+                app:sRightViewMarginRight="8dp"/>
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/endLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                    android:id="@+id/endImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:riv_border_color="@color/xui_config_color_gray_6"
+                    app:riv_border_width="1px"
+                    app:riv_corner_radius="15dp"
+                    app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                    app:riv_selected_border_width="1px"
+                    app:riv_selected_mask_color="@color/xui_config_color_gray_8" />
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/resultTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftTextString="Detection result"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightTextSize="16sp"
+                app:sLeftViewMarginLeft="10dp"
+                app:sRightViewMarginRight="8dp"/>
+
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/resultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                        android:id="@+id/resultArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="5dp"
+                        app:sLeftTextSize="15sp"
+                        app:sDividerLineType="none"
+                        app:sLeftTextString="Area(pixel)"
+                        app:sRightTextColor="@color/xui_config_color_main_theme"
+                        app:sRightTextSize="16sp"
+                        app:sRightViewMarginRight="8dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#BABCBF"/>
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                        android:id="@+id/resultLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        app:sLeftTextSize="15sp"
+                        app:sDividerLineType="none"
+                        app:sLeftTextString="Length(pixel)"
+                        app:sRightTextColor="@color/xui_config_color_main_theme"
+                        app:sRightTextSize="16sp"
+                        app:sRightViewMarginRight="8dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#BABCBF"/>
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                        android:id="@+id/resultMenWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        app:sLeftTextSize="15sp"
+                        app:sDividerLineType="none"
+                        app:sLeftTextString="Average width(pixel)"
+
+                        app:sRightIconMarginRight="15dp"
+                        app:sRightTextColor="@color/xui_config_color_main_theme"
+                        app:sRightTextSize="16sp"
+                        app:sRightViewMarginRight="8dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#BABCBF"/>
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                        android:id="@+id/resultRealWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        app:sLeftTextSize="15sp"
+                        app:sDividerLineType="none"
+                        app:sLeftTextString="Actual width(cm)"
+
+                        app:sRightIconMarginRight="15dp"
+                        app:sRightTextColor="@color/xui_config_color_main_theme"
+                        app:sRightTextSize="16sp"
+                        app:sRightViewMarginRight="8dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#BABCBF"/>
+
+                    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                        android:id="@+id/resultTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="5dp"
+                        app:sLeftTextSize="15sp"
+                        app:sDividerLineType="none"
+                        app:sLeftTextString="Record time(s)"
+                        app:sRightTextColor="@color/xui_config_color_main_theme"
+                        app:sRightTextSize="16sp"
+                        app:sRightViewMarginRight="8dp"/>
+
+                </LinearLayout>
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#BABCBF"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/resultRemark"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:sLeftTextSize="15sp"
+                app:sDividerLineType="none"
+                app:sLeftViewMarginLeft="10dp"
+                app:sLeftTextString="Description"
+                app:sRightTextColor="@color/xui_config_color_main_theme"
+                app:sRightTextString="Add"
+                app:sRightIconRes="@drawable/ic_arrow_right"
+                app:sRightTextSize="16sp"
+                app:sRightViewMarginRight="8dp"/>
+            <com.xuexiang.xui.widget.layout.ExpandableLayout
+                android:id="@+id/remarkLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@color/xui_config_color_white"
+                app:el_duration="300"
+                app:el_expanded="false">
+                <TextView
+                    android:id="@+id/resultTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:textSize="15sp"
+                    android:singleLine="false"
+                    android:ellipsize="end"
+                    android:background="@drawable/tv_bg"/>
+            </com.xuexiang.xui.widget.layout.ExpandableLayout>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                android:id="@+id/saveTV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                app:sCenterTextSize="18sp"
+                app:sDividerLineType="none"
+                app:sCenterTextString="Save"
+                app:sCenterTextColor="@color/xui_config_color_main_theme"
+                app:sRightTextSize="16sp"
+                app:sRightViewMarginRight="8dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

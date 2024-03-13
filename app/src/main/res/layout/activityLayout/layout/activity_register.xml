@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/xui_config_color_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:navigationIcon="@drawable/icon_back_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/headtip"
+            android:textSize="20sp"
+            android:text="Register"
+            android:textColor="#ffffff" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linear1"
+        android:weightSum="1"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/login_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:singleLine="true"
+            android:id="@+id/rg_userEV"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:id="@+id/rg_user_delet"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:src="@drawable/delet_login"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linear2"
+        android:weightSum="1"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/login_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/visible"
+            android:id="@+id/rg_ps_visible"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/rg_psEV"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm@."
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:layout_gravity="center"
+            android:id="@+id/rg_ps_delet"
+            android:visibility="invisible"
+            android:background="@drawable/delet_login"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:id="@+id/rg_submit"
+        android:layout_below="@+id/linear2"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:background="@drawable/submitbg1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
