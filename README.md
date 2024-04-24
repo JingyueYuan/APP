@@ -4,6 +4,7 @@ In order to achieve faster and smarter detection of cracks in the dam, this stud
 The mobile can take pictures of cracks in the dam or directly select the pictures of cracks in the phone. The pictures would be cropped first, and then be uploaded to the PC server for processing the pictures. The server first preprocesses the image, and then uses the segmentation model to segment the image. After obtaining the segmentation, pixel-level results would be calculated according to the existing methods for quantifying the geometric features of the cracks. The pictures of the skeleton of the cracks as well as the crack area, length, average width and actual width (The first three are measured in pixels and the last one is in millimeters.) is displayed in the interface. In the interface of the result, the description of this crack could also be input and we could save them into the database.
 ![image](https://github.com/JingyueYuan/APP/blob/b675dd5de394f80bec34881e45ad524319769872/Fig.%202.jpg)
 Before running APP, you need to run Serverflask.py to start the server.
+The APP we developed in this study is available from the corresponding author upon reasonable request.
 
 # Environment
 Android Studio
